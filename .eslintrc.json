@@ -1,0 +1,9 @@
+/**
+ * Rules have 3 settings 0 (off), 1 (warning), 2 (error)
+ */
+{
+  "extends": "mirum",
+  "parserOptions": {
+    "table": true
+  }
+}

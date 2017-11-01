@@ -1,0 +1,26 @@
+//**********************************************
+//  This is the manifest file.
+//  It contains all the sass imports and
+//  should not contain any actual css.
+//
+//  When importing from node_modules use a ~
+//  followed by the name of the module to import.
+//  Example: @import '~module-name`;
+//**********************************************
+
+@import 'easing';
+
+@import '~susy',
+        '~css-wipe'; // css reset
+
+//******** Configs and Helpers ********//
+@import 'config';
+
+//******** Elements (Atoms) ********//
+@import 'typography',
+        'buttons',
+        'forms';
+
+//******** Blocks ********//
+@import 'global',
+        'modules/testing-1';
