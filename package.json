@@ -9,9 +9,9 @@
     "cssOut": "dist/css",
     "cssMain": "master",
     "jsOut": "dist/js",
+    "images": "media",
     "copyDirs": [
-      "fonts",
-      "images"
+      "fonts"
     ]
   },
   "dependencies": {
@@ -37,6 +37,9 @@
     "fs-extra": "^3.0.1",
     "gulp-extname": "^0.2.2",
     "hashmark": "~4.1.0",
+    "imagemin": "^5.3.1",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-pngquant": "^5.0.1",
     "mkdirp": "~0.5.1",
     "node-sass": "~4.5.1",
     "node-sass-globbing": "~0.0.23",
@@ -62,6 +65,7 @@
     "build:js": "node bin/run build-js",
     "clean": "node bin/run clean",
     "dev": "node bin/run build --writeHtml && node bin/server --watch",
+    "images": "node bin/run image-min",
     "lint:js": "eslint -f 'table' src/scripts/**",
     "serve": "node bin/run server --watch",
     "test": "ava"
