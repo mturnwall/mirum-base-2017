@@ -7,6 +7,7 @@ const jsDir = process.env.npm_package_config_jsOut;
 
 module.exports = function () {
     return webpackMerge(commonConfig(), {
+        mode: "development",
         entry: [
             'webpack-hot-middleware/client',
         ],
@@ -14,8 +15,9 @@ module.exports = function () {
             path: '/',
             publicPath: '/js',
             filename: '[name].js',
+            hotUpdateChunkFilename: '[hash].hot-update.js', // this stops the hmr version from being added to assets.json
         },
-        plugins:   [
+        plugins: [
             new webpack.DefinePlugin({
                 'process.env.NODE_ENV': JSON.stringify('dev')
             }),
